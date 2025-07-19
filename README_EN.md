@@ -150,6 +150,8 @@ This method is automatically called on navigation and URL changes.
 
 ## ✅ Full Example
 
+JS:
+
 ```js
 Router.config({ mode: 'history', root: '/' }).listen();
 

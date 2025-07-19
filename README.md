@@ -149,6 +149,8 @@ Router.check(); // вручну викликає перевірку маршру
 
 ## ✅ Приклад повного використання
 
+JS:
+
 ```js
 Router.config({ mode: 'history', root: '/' }).listen();
 

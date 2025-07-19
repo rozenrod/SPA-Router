@@ -1,5 +1,5 @@
 /**
- * SPA Router v1.0.0
+ * SPA Router v1.0.1
  * -----------------
  * Легкий роутер для односторінкових застосунків з підтримкою:
  * - History та hash режимів
@@ -148,8 +148,10 @@ const Router = {
             location.hash = this.clearSlashes(path);
         }
 
-        window.scrollTo(0, 0); // Скидуємо прокрутку при переході
-        this.check();
+        if(push == true) {
+            window.scrollTo(0, 0); // Скидуємо прокрутку при переході
+            this.check();
+        }
         return this;
     },
 

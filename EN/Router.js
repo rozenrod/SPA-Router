@@ -1,5 +1,5 @@
 /**
- * SPA Router v1.0.0
+ * SPA Router v1.0.1
  * -----------------
  * Lightweight Single Page Application router with support for:
  * - History and hash modes
@@ -148,8 +148,10 @@ const Router = {
             location.hash = this.clearSlashes(path);
         }
 
-        window.scrollTo(0, 0); // Reset scroll on navigation
-        this.check();
+        if(push == true) {
+            window.scrollTo(0, 0); // Reset scroll on navigation
+            this.check();
+        }
         return this;
     },
 
